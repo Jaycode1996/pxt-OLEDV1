@@ -55,7 +55,7 @@ namespace OLEDV1 {
         if (column > 15) { c = 15 }
 
         cmd(0xB0 + r);            //set page address
-        cmd(0x00 + (8 * c & 0x0F));  //set column lower address
+        cmd(0x02 + (8 * c & 0x0F));  //set column lower address
         cmd(0x10 + ((8 * c >> 4) & 0x0F));   //set column higher address
     }
     function putChar(c: string) {
